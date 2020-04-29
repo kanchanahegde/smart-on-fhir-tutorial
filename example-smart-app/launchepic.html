@@ -26,8 +26,13 @@
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     <script>
       FHIR.oauth2.authorize({
+        "client":{
         'client_id': 'c6e0d676-71a3-4f09-a8de-87115a722fbe',
-        'scope':  'patient/*.read launch openid profile'
+        'scope':  'patient/*.read launch openid profile',
+        'redirect_uri': 'https://kanchanahegde.github.io/smart-on-fhir-tutorial/example-smart-app/indextest.html
+        },
+        "server":"https://apporchard.epic.com/interconnect-aocurprd-oauth/api/FHIR/DSTU2"
+        
       });
     </script>
     <div class="spinner">
