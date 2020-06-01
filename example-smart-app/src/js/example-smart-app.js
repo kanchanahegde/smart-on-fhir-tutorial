@@ -71,7 +71,8 @@
           //p.cond = JSON.stringify(condd);
           var arr = [];
           condd.forEach(function(con){
-            arr.push(`<div>${con.code.text}</div>`);
+            //arr.push(`<div>${con.code.text}</div>`);
+            arr.push(con.code.text);
              });
 //           p.cond = JSON.stringify(arr);
             p.cond = arr.join();
