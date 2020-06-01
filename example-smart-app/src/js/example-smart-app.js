@@ -21,8 +21,8 @@
                       }
                     }
                   });
-        var cond = smart.patient.api.fetchAll({
-                    type: 'Condition',
+        var condd = smart.patient.api.fetchAll({
+                    type: 'Condition'
                   });
 
         $.when(pt, obv).fail(onError);
@@ -39,7 +39,7 @@
             lname = patient.name[0].family.join(' ');
           }
           
-          $.when(pt, cond).fail(onError);
+          $.when(pt, condd).fail(onError);
           
 
 
@@ -56,8 +56,8 @@
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
           p.cond = "ttttthk";
-          $.when(pt, cond).done(function(patient, cond) {
-          p.cond = JSON.stringify(cond);
+          $.when(pt, condd).done(function(patient, condd) {
+          p.cond = JSON.stringify(condd);
           }
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
