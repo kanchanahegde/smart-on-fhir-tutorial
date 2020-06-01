@@ -21,6 +21,9 @@
                       }
                     }
                   });
+        var cond = smart.patient.api.fetchAll({
+                    type: 'Condition',
+                  });
 
         $.when(pt, obv).fail(onError);
 
@@ -34,6 +37,12 @@
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
             lname = patient.name[0].family.join(' ');
+          }
+          
+        $.when(pt, cond).fail(onError);
+
+        $.when(pt, cond).done(function(patient, cond) {
+          p.cond = "teststest";
           }
 
           var height = byCodes('8302-2');
@@ -83,6 +92,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      cond:{value:''}
     };
   }
 
@@ -126,6 +136,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
+    $('#cond').html(p.cond);
   };
 
 })(window);
