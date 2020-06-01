@@ -55,10 +55,7 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
-          p.cond = "ttttthk";
-          $.when(pt, condd).done(function(patient, condd) {
-          p.cond = JSON.stringify(condd);
-          }
+        
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
           }
@@ -69,9 +66,15 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
-
+          p.cond = "ttttthk";
+          $.when(pt, condd).done(function(patient, condd) {
+          p.cond = JSON.stringify(condd);
+          });
           ret.resolve(p);
         });
+        
+        
+        
       } else {
         onError();
       }
