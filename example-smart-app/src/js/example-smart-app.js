@@ -40,7 +40,7 @@
           }
           
         $.when(pt, cond).fail(onError);
-
+          p.cond = "ttttt";
         $.when(pt, cond).done(function(patient, cond) {
           p.cond = "teststest";
           }
