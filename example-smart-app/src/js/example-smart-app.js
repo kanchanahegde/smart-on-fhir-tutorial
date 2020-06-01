@@ -40,7 +40,7 @@
           }
           
 //         $.when(pt, cond).fail(onError);
-          p.cond = "ttttt";
+          
 //         $.when(pt, cond).done(function(patient, cond) {
 //           p.cond = "teststest";
 //           }
@@ -57,7 +57,7 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
-
+          p.cond = "ttttt";
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
           }
