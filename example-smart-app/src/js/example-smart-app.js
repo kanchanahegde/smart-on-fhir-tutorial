@@ -55,7 +55,7 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
-          p.cond = "ttttt";
+          p.cond = "ttttthk";
           $.when(pt, cond).done(function(patient, cond) {
           p.cond = JSON.stringify(cond);
           }
