@@ -69,6 +69,7 @@
           p.cond = "ttttthk";
           $.when(pt, condd).done(function(patient, condd) {
           p.cond = JSON.stringify(condd);
+          ret.resolve(p);
           });
           ret.resolve(p);
         });
