@@ -21,9 +21,9 @@
                       }
                     }
                   });
-//         var cond = smart.patient.api.fetchAll({
-//                     type: 'Condition',
-//                   });
+        var cond = smart.patient.api.fetchAll({
+                    type: 'Condition',
+                  });
 
         $.when(pt, obv).fail(onError);
 
@@ -39,11 +39,9 @@
             lname = patient.name[0].family.join(' ');
           }
           
-//         $.when(pt, cond).fail(onError);
+          $.when(pt, cond).fail(onError);
           
-//         $.when(pt, cond).done(function(patient, cond) {
-//           p.cond = "teststest";
-//           }
+
 
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
@@ -58,6 +56,9 @@
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
           p.cond = "ttttt";
+          $.when(pt, cond).done(function(patient, cond) {
+          p.cond = JSON.stringify(cond);
+          }
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
           }
