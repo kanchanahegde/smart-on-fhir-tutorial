@@ -72,6 +72,7 @@
           
           }).done(function(){
             ret.resolve(p);
+          }
             );
           ret.resolve(p);
         });
