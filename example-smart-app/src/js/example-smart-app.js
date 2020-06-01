@@ -68,12 +68,18 @@
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           p.cond = "ttttthk";
           $.when(pt, condd).done(function(patient, condd) {
-          p.cond = JSON.stringify(condd);
-          
-          }).done(function(){
-            ret.resolve(p);
-          }
-            );
+          //p.cond = JSON.stringify(condd);
+          var arr = [];
+          condd.forEach(function(con){
+            arr.push(`<div>${con.code.text}</div>`);
+             });
+          p.cond = JSON.stringify(arr);
+          ret.resolve(p);
+          });
+//           .done(function(){
+            
+//           }
+//             );
           ret.resolve(p);
         });
         
