@@ -68,7 +68,7 @@
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           p.cond = "ttttthk";
           $.when(pt, condd).done(function(patient, condd) {
-          //p.cond = JSON.stringify(condd);
+            //p.cond = JSON.stringify(condd);
           var arr = [];
           condd.forEach(function(con){
             //arr.push(`<div>${con.code.text}</div>`);
@@ -76,6 +76,7 @@
              });
 //           p.cond = JSON.stringify(arr);
             p.cond = arr.join();
+            p.cond = JSON.stringify(condd);
           ret.resolve(p);
           });
 //           .done(function(){
