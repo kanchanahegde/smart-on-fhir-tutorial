@@ -77,6 +77,7 @@
 //           p.cond = JSON.stringify(arr);
             p.cond = arr.join();
             p.cond = JSON.stringify(condd);
+            console.log(JSON.stringify(condd));
           ret.resolve(p);
           });
 //           .done(function(){
