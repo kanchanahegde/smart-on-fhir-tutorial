@@ -75,8 +75,7 @@
             arr.push(con.code.text);
              });
 //           p.cond = JSON.stringify(arr);
-            p.cond = arr.join();
-            p.cond = JSON.stringify(condd);
+            p.cond = arr.join();  
             console.log(JSON.stringify(condd));
           ret.resolve(p);
           });
