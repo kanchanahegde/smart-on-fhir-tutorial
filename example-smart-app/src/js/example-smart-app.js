@@ -12,7 +12,8 @@
         var patient = smart.patient;
         var pt = patient.read();
          console.log("writestart");
-          pt["height"] = 3434;
+          console.log(pt.gender);
+          pt["gender"] = "Male";
           smart.api.update({resource: pt}).done(function(r) {
             console.log("updated");
        });
