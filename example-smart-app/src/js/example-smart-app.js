@@ -13,7 +13,7 @@
         var pt = patient.read();
         
           pt["height"] = 3434;
-          smart.api.update({resource: patient}).done(function(r) {
+          smart.api.update({resource: pt}).done(function(r) {
             console.log("updated");
        });
         
