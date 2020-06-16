@@ -91,8 +91,6 @@
 //           }
 //             );
 //           ret.resolve(p);
-        });
-        
           console.log("writestart");
           console.log(p.gender);
           p["gender"] = "Male";
@@ -101,6 +99,9 @@
        });
         
         console.log("writeend");
+        });
+        
+          
         
       } else {
         onError();
