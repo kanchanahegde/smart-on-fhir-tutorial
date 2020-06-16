@@ -92,7 +92,7 @@
 //             );
 //           ret.resolve(p);
           console.log("writestart");
-          console.log(p.gender);
+          console.log(p["gender"]);
           p["gender"] = "Male";
           smart.api.update({resource: p}).done(function(r) {
           console.log("updated");
