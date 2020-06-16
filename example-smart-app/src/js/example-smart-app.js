@@ -11,14 +11,7 @@
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         var pt = patient.read();
-         console.log("writestart");
-          console.log(pt.gender);
-          pt["gender"] = "Male";
-          smart.api.update({resource: pt}).done(function(r) {
-            console.log("updated");
-       });
-        
-        console.log("writeend");
+       
         
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
@@ -65,6 +58,11 @@
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
         
+          
+   
+          
+          
+          
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
           }
@@ -95,7 +93,14 @@
 //           ret.resolve(p);
         });
         
+          console.log("writestart");
+          console.log(p.gender);
+          pt["gender"] = "Male";
+          smart.api.update({resource: p}).done(function(r) {
+          console.log("updated");
+       });
         
+        console.log("writeend");
         
       } else {
         onError();
