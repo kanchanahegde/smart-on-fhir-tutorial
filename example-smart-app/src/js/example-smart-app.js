@@ -11,13 +11,13 @@
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         var pt = patient.read();
-        
+         console.log("writestart");
           pt["height"] = 3434;
           smart.api.update({resource: pt}).done(function(r) {
             console.log("updated");
        });
         
-        
+        console.log("writeend");
         
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
